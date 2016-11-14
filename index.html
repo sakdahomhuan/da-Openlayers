@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bing Maps</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" type="text/css">
+  <link rel="stylesheet" href="http://openlayers.org/en/v3.2.1/css/ol.css" type="text/css">
+  <link rel="stylesheet" href="app_style.css" type="text/css">
+  <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+</head>
+
+<body>
+
+
+<!-- Fixed navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+	  
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+		
+        <div id="navbar" class="navbar-collapse collapse">		
+          <ul class="nav navbar-nav">
+		  
+            <li><a href="#">Home</a></li>            
+			
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Base map<span class="caret"></span></a>
+			  <ul class="dropdown-menu" id="layerswitcher">
+				<li class="dropdown">
+				  <li style="padding-left:5px;"><strong> Maps</strong></li>
+					<div class="radio"><label><li style="padding-left:10px;"><input type="radio" name="layer" value="0" checked=""> Open Street Map</li></label></div>
+					<div class="radio"><label><li style="padding-left:10px;"><input type="radio" name="layer" value="1"> Bing Road</li></label></div>
+					<div class="radio"><label><li style="padding-left:10px;"><input type="radio" name="layer" value="3"> Water Colors</li></label></div>
+				  <li class="divider"></li>
+				  <li style="padding-left:5px;"><strong> Imagery</strong></li>			  
+					<div class="radio"><label><li style="padding-left:10px;"><input type="radio" name="layer" value="2"> Bing Satellite</li></label></div>
+				</li>
+			  </ul>
+			</li>  
+			
+			<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Overlay layers<span class="caret"></span></a>
+			  <ul class="dropdown-menu" >            
+				<div class="checkbox"><li style="padding-left:10px;"><label class="checkbox-inline"><input id="lyrs5" type="checkbox" value="5" checked=""> ขอบเขตจังหวัด</label></li>  </div>          
+				<div class="checkbox"><li style="padding-left:10px;"><label class="checkbox-inline"><input id="lyrs4" type="checkbox" value="4"> ขอบเขตอำเภอ</label></li></div>
+				<div class="checkbox"><li style="padding-left:10px;"><label class="checkbox-inline"><input id="lyrs6" type="checkbox" value="6"> รพ.สต.</label></li></div>
+				<div class="checkbox"><li style="padding-left:10px;"><label class="checkbox-inline"><input id="lyrs7" type="checkbox" value="7"> ที่ตั้งหมู่บ้าน</label></li></div>
+			  </ul>
+			</li> 	
+			
+			<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Nav header</li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+			
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+			
+		  </ul>
+		  
+          <!-- ul class="nav navbar-nav navbar-right">
+            <li><a href="../navbar/">Default</a></li>
+            <li><a href="../navbar-static-top/">Static top</a></li>
+            <li class="active"><a href="./">Fixed top <span class="sr-only">(current)</span></a></li>
+          </ul -->
+		  
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+  <div id="map" class="map"></div>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://openlayers.org/en/v3.2.1/build/ol.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxiPmMnktVwyw2nmh3qViegKQ8srD22Sc"></script>
+  <script src="http://mapgears.github.io/ol3-google-maps/examples/dist/ol3gm.js"></script>
+  <script src="apps.js"></script>
+</body>
+
+</html>
